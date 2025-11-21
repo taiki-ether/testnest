@@ -3,7 +3,7 @@ npm i
 
 cp  ./nestapi-ether.service /etc/systemd/system/
 systemctl daemon-reload
-systemctl enable nest-api-ether --now
+systemctl enable nestapi-ether --now
 
 apt install nginx -y
 
