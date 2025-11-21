@@ -1,0 +1,20 @@
+[Unit]
+Description=NestJS Ether API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/testnest
+ExecStart=/usr/local/bin/npm run start:prod
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=nestapi-ether
+
+Environment=NODE_ENV=production
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target
